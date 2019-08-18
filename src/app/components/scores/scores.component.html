@@ -1,0 +1,9 @@
+<div class="card-body text-center">
+  <p>Player : <span class="font-weight-bolder">{{data.playername}}</span></p>
+  <p>Clicks total : <span class="font-weight-bolder">{{data.clickCount}}</span></p>
+  <p>Click per sec : <span class="font-weight-bolder">{{ data.clickCount/data.defaulttime | number }}</span></p>
+  <div class="row justify-content-around">
+    <button class="btn btn-dark" (click)="appStatusPregame()"> Change player </button>
+    <button class="btn btn-success" (click)="appStatusGame()"> Restart </button>
+  </div>
+</div>

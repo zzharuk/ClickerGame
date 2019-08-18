@@ -1,0 +1,10 @@
+<div class="card-body text-center">
+    <div class="d-flex">
+        <div class="flex-fill">
+            <input type="text" class="form-control" placeholder="Your name" [(ngModel)]="playerName" >
+        </div>
+        <div class="col">
+            <button [ngStyle]="(playerName.length > 0) ? {opacity:1} : {opacity:0}" class="btn btn-info" (click)="sendStatus()" >Start</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="card-header d-flex">
+  <div>Hello <span class="font-weight-bolder">{{data.playername}}</span> ! Let's start.</div>
+  <div class="ml-auto form-row">
+    <span class="mx-2 d-inline">Timer: </span>
+    <form [formGroup]="form" class="">
+      <select formControlName="time" class="form-control d-inline">
+        <option *ngFor="let time of data.times" [ngValue]="time">
+          {{ time }}
+        </option>
+      </select>
+    </form>
+  </div>
+</div>
+<div class="card-body text-center">
+  <div class="d-flex">
+    <button class="btn btn-success gameButton mx-auto shadow-md" (click)="gameEvent()">{{buttonTitle}}</button>
+  </div>
+  <h3 *ngIf="gameProgress" class=text-center>Time left: {{Timer.gametime}}</h3>
+</div>
